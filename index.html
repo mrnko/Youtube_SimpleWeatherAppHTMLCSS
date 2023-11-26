@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="app__weather">
+            <div class="app__top">
+                <div class="app__day">Tuesday</div>
+                <div class="app__date">20 Jun 2022</div>
+                <div class="app__location">
+                    <div class="app__location-icon">
+                        <img class="app__location-icon-element" src="images/location.svg" alt="Biarritz, FR">
+                    </div>
+                    <div class="app__location-value">Biarritz, FR</div>
+                </div>
+            </div>
+            <div class="app__bottom">
+                <img class="app__sun" src="images/sun.svg" alt="Sunny">
+                <div class="app__temperature">29 °C</div>
+                <div class="app__status">Sunny</div>
+            </div>
+        </div>
+
+        <div class="app__info">
+            <div class="app__list">
+                <div class="app__list-item">
+                    <div class="app__list-item-title">PRECIPITATION</div>
+                    <div class="app__list-item-value">0%</div>
+                </div>
+                <div class="app__list-item">
+                    <div class="app__list-item-title">HUMIDITY</div>
+                    <div class="app__list-item-value">42%</div>
+                </div>
+                <div class="app__list-item">
+                    <div class="app__list-item-title">WIND</div>
+                    <div class="app__list-item-value">3 km/h</div>
+                </div>
+            </div>
+            <div class="app__days">
+                <div class="app__days-item app__days-item--current">
+                    <img class="app__days-image" src="images/icon-1.svg" alt="Tue">
+                    <h3 class="app__days-title">Tue</h3>
+                    <p class="app__days-temperature">30 °C</p>
+                </div>
+                <div class="app__days-item">
+                    <img class="app__days-image" src="images/icon-2.svg" alt="Wed">
+                    <h3 class="app__days-title">Wed</h3>
+                    <p class="app__days-temperature">22 °C</p>
+                </div>
+                <div class="app__days-item">
+                    <img class="app__days-image" src="images/icon-3.svg" alt="Thu">
+                    <h3 class="app__days-title">Thu</h3>
+                    <p class="app__days-temperature">06 °C</p>
+                </div>
+                <div class="app__days-item">
+                    <img class="app__days-image" src="images/icon-4.svg" alt="Fri">
+                    <h3 class="app__days-title">Fri</h3>
+                    <p class="app__days-temperature">26 °C</p>
+                </div>
+            </div>
+            <button class="app__button">
+                <img class="app__button-icon" src="images/location.svg" alt="Change Location">
+                Change Location
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

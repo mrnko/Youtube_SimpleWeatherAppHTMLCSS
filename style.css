@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #343D4B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    width: 1000px;
+    height: 670px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.app__weather {
+    width: 493px;
+    height: 100%;
+    background: url('images/main-img.jpg') no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app__day {
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.app__date {
+    margin: 16px 0 13px 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.app__location {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+}
+
+.app__info {
+    width: 520px;
+    height: 623px;
+    background-color: #222831;
+    padding: 55px;
+}
+
+.app__temperature {
+    margin: 9px 0 13px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.app__status {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.app__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+}
+
+.app__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app__list-item-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.app__list-item-value {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.app__days {
+    margin: 79px 0 69px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 1px;
+}
+
+.app__days-item {
+    height: 168px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272E37;
+    box-shadow: 1px 2px 4px 0px #222831;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+    cursor: pointer;
+}
+
+.app__days-item:not(.app__days-item--current):hover {
+    background-color: #2c343e;
+}
+
+.app__days-item--current {
+    background-color: #fff;
+    color: #000;
+}
+
+.app__days-image {
+    max-width: 55px;
+}
+
+.app__days-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.app__days-temperature {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.app__button {
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 8px;
+    background: linear-gradient(91deg, rgba(144, 217, 224, 0.90) 0.2%, rgba(84, 96, 230, 0.90) 100%);
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    appearance: button;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform .2s ease;
+}
+
+.app__button:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .app {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app__weather, .app__info {
+        width: 100%;
+        height: auto;
+    }
+
+    .app__weather {
+        border-radius: 0;
+    }
+
+    .app__info {
+        padding: 48px 32px;
+    }
+
+    .app__bottom {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .app__days {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1px;
+    }
+}
